@@ -11,7 +11,7 @@ class Triangle
 
   def kind
     if sides.any? {|side| side <= 0} || sides[0] + sides[1] < sides[2]
-        raise Triangle::TriangleError
+        raise TriangleError
     else
       if sides.select {|side| side == sides[0]}.count > 2
         @type = :equilateral
