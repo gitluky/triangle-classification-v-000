@@ -6,7 +6,7 @@ class Triangle
     self.kind(@sides)
   end
 
-  def kind(sides)
+  def kind(side_array)
     if self.sides.any?{|side| side > 0} && sides[0] + sides[1] < sides[2]
       begin
         raise TriangleError
