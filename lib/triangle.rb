@@ -7,7 +7,7 @@ class Triangle
   end
 
   def kind(a,b,c)
-    if sides.any?{|side| side > 0} && sides[0] + sides[1] > sides[2]
+    if self.sides.any?{|side| side > 0} && sides[0] + sides[1] > sides[2]
 
     else
       begin
