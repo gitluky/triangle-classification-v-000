@@ -1,8 +1,6 @@
 class Triangle
   attr_accessor :kind
 
-  @@kind = [:quilateral, :isosceles, :scalene]
-
   def initialize(side_a, side_b, side_c)
     kind = self.identify(side_a,side_b,side_c)
 
