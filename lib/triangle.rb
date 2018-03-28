@@ -35,3 +35,5 @@ class Triangle
   end
 
 end
+
+new_triangle = Triangle.new(2,2,2)
