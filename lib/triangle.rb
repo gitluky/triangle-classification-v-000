@@ -15,12 +15,13 @@ class Triangle
       end
     else
       if a == b && b == c
-        self.kind = :equilateral
+        @kind = :equilateral
       elsif a == b || b == c || a == c
-        self.kind = :isosceles
+        @kind = :isosceles
       else
-        self.kind = :scalene
+        @kind = :scalene
       end
+      @kind
     end
   end
 
