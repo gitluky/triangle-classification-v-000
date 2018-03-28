@@ -6,7 +6,7 @@ class Triangle
 
   end
 
-  def identify(a,b,c)
+  def kind(a,b,c)
     sides = [a,b,c]
     if sides.all?{|side| side > 0} && sides[0] + sides[1] > sides[2]
       if a == b && b == c
