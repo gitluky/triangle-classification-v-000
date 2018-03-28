@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :kind
+  attr_accessor :type
 
   def initialize(a,b,c)
 
@@ -7,6 +7,7 @@ class Triangle
   end
 
   def kind
+    @type
 
   end
 
