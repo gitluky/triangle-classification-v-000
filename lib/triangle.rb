@@ -7,7 +7,7 @@ class Triangle
   end
 
   def kind(side_array)
-    if side_array.any?{|side| side_array > 0} && side_array[0] + side_array[1] < side_array[2]
+    if side_array.any?{|side| side > 0} && side_array[0] + side_array[1] < side_array[2]
       begin
         raise TriangleError
       rescue TriangleError => error
