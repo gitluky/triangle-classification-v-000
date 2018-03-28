@@ -2,7 +2,7 @@ class Triangle
   attr_accessor :kind
 
   def initialize(side_a, side_b, side_c)
-    kind = self.identify(side_a,side_b,side_c)
+    self.identify(side_a,side_b,side_c)
 
   end
 
@@ -20,10 +20,6 @@ class Triangle
   class TriangleError < StandardError
 
   end
-
-
-
-
 
 
 end
