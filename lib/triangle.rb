@@ -16,7 +16,6 @@ class Triangle
         error.message
       end
     else
-      binding.pry
       if sides.select {|side| side == sides[0]}.count > 2
         @type = :equilateral
       elsif sides.select {|side| side == sides[0] || side == sides[1]}.count > 1
