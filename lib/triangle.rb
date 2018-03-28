@@ -1,6 +1,14 @@
 class Triangle
   attr_accessor :kind
 
+
+    class TriangleError < StandardError
+      def message
+        puts "Invalid Triangle"
+      end
+
+    end
+
   def initialize(side_a, side_b, side_c)
     self.identify(side_a,side_b,side_c)
 
@@ -25,12 +33,6 @@ class Triangle
     end
   end
 
-  class TriangleError < StandardError
-    def message
-      puts "Invalid Triangle"
-    end
-
-  end
 
 
 end
