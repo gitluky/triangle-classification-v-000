@@ -6,18 +6,22 @@ class Triangle
   def initialize(kind)
     if self.class.kind.none?(kind)
       begin
-        raise KindException
-      rescue KindException => error
-        error.message
+        raise TriangleError
+      rescue TriangleError => error
+
       end
     else
       @kind = kind
     end
   end
-  
-      
 
+  class TriangleError < StandardError
     
+  end
 
-  
+
+
+
+
+
 end
