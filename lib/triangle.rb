@@ -4,7 +4,6 @@ class Triangle
   def initialize(side_a, side_b, side_c)
     @sides = [side_a,side_b,side_c]
     self.kind(@sides)
-
   end
 
   def kind(sides)
