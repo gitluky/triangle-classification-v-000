@@ -4,7 +4,8 @@ class Triangle
   @@kind = [:quilateral, :isosceles, :scalene]
 
   def initialize(side_a, side_b, side_c)
-    self.identify(side_a,side_b,side_c)
+    kind = self.identify(side_a,side_b,side_c)
+
   end
 
     def identify(a,b,c)
