@@ -10,11 +10,7 @@ class Triangle
 
   def kind
     if sides.any? {|side| side <= 0} || sides[0] + sides[1] < sides[2]
-      begin
         raise TriangleError
-      rescue TriangleError => error
-        error.message
-      end
     else
       if sides.select {|side| side == sides[0]}.count > 2
         @type = :equilateral
@@ -28,9 +24,7 @@ class Triangle
 
 
   class TriangleError < StandardError
-    def message
-      "Invalid Triangle"
-    end
+
   end
 
 end
