@@ -12,9 +12,9 @@ class Triangle
           when a == b && b == c
             self.kind = :equilateral
           when a == b || b == c || a == c
-            self.kind == :isosceles
+            self.kind = :isosceles
           else
-            self.kind == :scalene
+            self.kind = :scalene
         end
       else
         begin
