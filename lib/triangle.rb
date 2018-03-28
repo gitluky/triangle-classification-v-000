@@ -7,13 +7,19 @@ class Triangle
   end
 
   def kind(a,b,c)
-    if self.sides.any?{|side| side > 0} && sides[0] + sides[1] > sides[2]
-
-    else
+    if self.sides.any?{|side| side > 0} && sides[0] + sides[1] < sides[2]
       begin
         raise TriangleError
       rescue TriangleError => error
         error.message
+      end
+    else
+      if a == b && b == c
+        self.kind = :equilateral
+      elsif a == b || b == c || a == c
+        self.kind = :isosceles
+      else
+        self.kind = :scalene
       end
     end
   end
