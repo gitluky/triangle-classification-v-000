@@ -11,12 +11,12 @@ class Triangle
       begin
         raise TriangleError
       rescue
-        
+
       end
 
 
 
-    
+
     @type
 
   end
@@ -24,7 +24,7 @@ class Triangle
 
   class TriangleError < StandardError
     def message
-      puts "Invalid Triangle"
+      "Invalid Triangle"
     end
   end
 
