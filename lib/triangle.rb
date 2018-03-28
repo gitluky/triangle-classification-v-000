@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :kind, :sides
+  attr_accessor :kind
 
   def initialize(side_a, side_b, side_c)
     sides = [side_a,side_b,side_c]
@@ -7,7 +7,7 @@ class Triangle
   end
 
   def kind(side_array)
-    if self.sides.any?{|side| side > 0} && sides[0] + sides[1] < sides[2]
+    if side_array.any?{|side| side_array > 0} && side_array[0] + side_array[1] < side_array[2]
       begin
         raise TriangleError
       rescue TriangleError => error
