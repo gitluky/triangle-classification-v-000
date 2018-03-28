@@ -3,7 +3,7 @@ class Triangle
 
   def initialize(a,b,c)
     sides = [a,b,c]
-    kind(sides)
+    self.kind(sides)
   end
 
   def kind(sides)
