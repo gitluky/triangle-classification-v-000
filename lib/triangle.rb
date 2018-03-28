@@ -7,7 +7,8 @@ class Triangle
   end
 
     def identify(a,b,c)
-      if a + b > c
+      sides = [a,b,c]
+      if a + b > c && sides.none?(0)
         if a == b && b == c
           self.kind = :equilateral
         elsif a == b || b == c || a == c
