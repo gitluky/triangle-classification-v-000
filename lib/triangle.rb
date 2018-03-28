@@ -5,7 +5,6 @@ class Triangle
 
   def initialize(a,b,c)
     self.sides = [a,b,c]
-    binding.pry
     self.kind
   end
 
