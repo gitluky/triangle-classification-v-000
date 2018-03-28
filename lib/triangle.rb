@@ -8,13 +8,12 @@ class Triangle
 
     def identify(a,b,c)
       if a + b > c
-        case type
-          when a == b && b == c
-            self.kind = :equilateral
-          when a == b || b == c || a == c
-            self.kind = :isosceles
-          else
-            self.kind = :scalene
+        if a == b && b == c
+          self.kind = :equilateral
+        elsif a == b || b == c || a == c
+          self.kind = :isosceles
+        else
+          self.kind = :scalene
         end
       else
         begin
