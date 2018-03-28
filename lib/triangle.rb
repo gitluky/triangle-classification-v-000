@@ -22,14 +22,6 @@ class Triangle
         :scalene
       end
     end
-
-
-
-
-
-
-    @type
-
   end
 
 
