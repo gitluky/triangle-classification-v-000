@@ -7,13 +7,21 @@ class Triangle
   end
 
     def identify(a,b,c)
-      case type
-        when a == b && b == c
-          self.kind = :equilateral
-        when a == b || b == c || a == c
-          self.kind == :isosceles
-        else
-          self.kind == :scalene
+      if a + b > c 
+        case type
+          when a == b && b == c
+            self.kind = :equilateral
+          when a == b || b == c || a == c
+            self.kind == :isosceles
+          else
+            self.kind == :scalene
+        end
+      else
+        begin
+          raise TriangleError
+        rescue TriangleError => error
+          error.message
+        end
       end
     end
 
