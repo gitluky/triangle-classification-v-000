@@ -3,7 +3,7 @@ class Triangle
 
   @@kind = [:quilateral, :isosceles, :scalene]
 
-  def initialize(kind)
+  def initialize(length_1,length_2,length_3)
     if self.class.kind.none?(kind)
       begin
         raise TriangleError
