@@ -14,9 +14,9 @@ class Triangle
         error.message
       end
     else
-      if a == b && b == c
+      if side_array[0] == side_array[1] && side_array[1] == side_array[2]
         @kind = :equilateral
-      elsif a == b || b == c || a == c
+      elsif side_array[0] == side_array[1] && side_array[0] != side_array[2]
         @kind = :isosceles
       else
         @kind = :scalene
