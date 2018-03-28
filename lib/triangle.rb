@@ -7,7 +7,7 @@ class Triangle
   end
 
     def identify(a,b,c)
-      if a + b > c 
+      if a + b > c
         case type
           when a == b && b == c
             self.kind = :equilateral
@@ -26,6 +26,9 @@ class Triangle
     end
 
   class TriangleError < StandardError
+    def message
+      puts "Invalid Triangle"
+    end
 
   end
 
