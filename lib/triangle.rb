@@ -2,20 +2,14 @@ class Triangle
   attr_accessor :kind
 
   def initialize(side_a, side_b, side_c)
-    self.kind(side_a,side_b,side_c)
+    @sides = [side_a,side_b,side_c]
 
   end
 
   def kind(a,b,c)
     sides = [a,b,c]
-    if sides.all?{|side| side > 0} && sides[0] + sides[1] > sides[2]
-      if a == b && b == c
-        self.kind = :equilateral
-      elsif a == b || b == c || a == c
-        self.kind = :isosceles
-      else
-        self.kind = :scalene
-      end
+    if sides.any?{|side| side > 0} && sides[0] + sides[1] > sides[2]
+
     else
       begin
         raise TriangleError
