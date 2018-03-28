@@ -5,6 +5,7 @@ class Triangle
 
   def initialize(a,b,c)
     self.sides = [a,b,c]
+    binding.pry
     self.kind
   end
 
@@ -29,4 +30,4 @@ class Triangle
 
 end
 
-new_triangle = Triangle.new(2,2,2)
+new_triangle = Triangle.new(0,0,0)
