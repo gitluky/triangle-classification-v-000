@@ -3,10 +3,11 @@ class Triangle
 
   def initialize(side_a, side_b, side_c)
     @sides = [side_a,side_b,side_c]
+    self.kind(sides)
 
   end
 
-  def kind(a,b,c)
+  def kind(sides)
     if self.sides.any?{|side| side > 0} && sides[0] + sides[1] < sides[2]
       begin
         raise TriangleError
