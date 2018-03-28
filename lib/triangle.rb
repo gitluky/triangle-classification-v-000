@@ -2,7 +2,7 @@ class Triangle
   attr_accessor :kind
 
   def initialize(side_a, side_b, side_c)
-    self.identify(side_a,side_b,side_c)
+    self.kind(side_a,side_b,side_c)
 
   end
 
