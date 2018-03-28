@@ -15,11 +15,11 @@ class Triangle
       end
     else
       if sides.select{|side| side == side[1]}.count > 2
-        :equilateral
+        @type = :equilateral
       elsif sides.select {|side| side == sides[0] || side == sides[1]}.count > 1
-        :isosceles
+        @type = :isosceles
       else
-        :scalene
+        @type = :scalene
       end
     end
   end
