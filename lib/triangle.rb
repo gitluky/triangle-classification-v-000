@@ -18,7 +18,7 @@ class Triangle
     else
       if sides.select {|side| side == sides[0]}.count > 2
         @type = :equilateral
-      elsif sides.select {|side| side == sides[0] || side == sides[1]}.count > 1
+      elsif sides.select {|side| side == sides[0]}.count > 1 || sides.select {|side| side == sides[1]}.count > 1
         @type = :isosceles
       else
         @type = :scalene
