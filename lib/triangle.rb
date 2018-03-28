@@ -2,11 +2,11 @@ class Triangle
   attr_accessor :kind
 
   def initialize(side_a, side_b, side_c)
-    sides = [side_a,side_b,side_c]
-    self.kind(sides)
+    self.kind(side_a, side_b, side_c)
   end
 
-  def kind(side_array)
+  def kind(a,b,c)
+    side_array = [a,b,c]
     if side_array.any?{|side| side <= 0} || side_array[0] + side_array[1] < side_array[2]
       begin
         raise TriangleError
