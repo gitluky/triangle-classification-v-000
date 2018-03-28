@@ -14,7 +14,7 @@ class Triangle
         error.message
       end
     else
-      if sides.select {|side| side == side[1]}.count > 2
+      if sides.select {|side| side == side[0]}.count > 2
         @type = :equilateral
       elsif sides.select {|side| side == sides[0] || side == sides[1]}.count > 1
         @type = :isosceles
